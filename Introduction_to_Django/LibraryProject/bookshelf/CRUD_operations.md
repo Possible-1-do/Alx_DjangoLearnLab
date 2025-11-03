@@ -5,7 +5,8 @@ book
 book.title = "Nineteen Eighty-Four"
 book.save()
 book
-<Book: Nineteen Eighty-Four by George Orwell>book = Book.objects.first()
+<Book: Nineteen Eighty-Four by George Orwell>book = from bookshelf.models import Book
+book = Book.objects.get(title="1984")
 book.delete()
 (1, {'bookshelf.Book': 1})
 from bookshelf.models import Book

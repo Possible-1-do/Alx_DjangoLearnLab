@@ -8,5 +8,7 @@ book
 <Book: Nineteen Eighty-Four by George Orwell>book = Book.objects.first()
 book.delete()
 (1, {'bookshelf.Book': 1})
-Book.objects.all()
-<QuerySet [<Book: 1984 by George Orwell>]>
+from bookshelf.models import Book
+book = Book.objects.get(title="1984")
+print(book)
+1984 by George Orwell

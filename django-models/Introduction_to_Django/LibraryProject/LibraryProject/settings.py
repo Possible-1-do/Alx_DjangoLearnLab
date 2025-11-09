@@ -38,14 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookshelf',
-    'relationship_app',
 ]
-
-# Redirect URLs for authentication
-LOGIN_URL = 'login'           # Redirects to login page if @login_required is used
-LOGIN_REDIRECT_URL = 'list_books'  # Redirect after successful login
-LOGOUT_REDIRECT_URL = 'login'      # Redirect after logout
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

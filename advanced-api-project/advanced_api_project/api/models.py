@@ -1,3 +1,13 @@
+"""
+Models:
+- Author: Represents a book author; contains only the author's name.
+- Book: Represents a book; linked to Author through a ForeignKey.
+
+Relationships:
+- One-to-many: One author can have multiple books.
+- The 'related_name="books"' allows reverse lookup such as author.books.all()
+"""
+
 from django.db import models
 
 # Author Model:

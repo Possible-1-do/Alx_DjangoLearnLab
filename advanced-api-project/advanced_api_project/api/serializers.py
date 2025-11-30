@@ -1,3 +1,16 @@
+"""
+Serializers:
+- BookSerializer: Serializes Book model fields and includes custom validation
+  to ensure publication_year is not set in the future.
+
+- AuthorSerializer: Serializes the Author model and includes a nested
+  BookSerializer to display all related books dynamically.
+
+Relationship Handling:
+- The nested serializer (books = BookSerializer(many=True)) automatically uses
+  the related_name 'books' defined in Book.author ForeignKey.
+"""
+
 from rest_framework import serializers
 from .models import Author, Book
 from datetime import datetime
